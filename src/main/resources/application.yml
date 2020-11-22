@@ -1,0 +1,8 @@
+spring:
+  profiles:
+    active: local
+mybatis:
+  type-aliases-package: com.snc.redis.entity
+  mapper-locations: classpath:/mapper/*.xml
+
+

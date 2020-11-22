@@ -1,0 +1,23 @@
+server:
+  port: 8082
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: X2n>:%opVyyU
+    url: jdbc:mysql://10.168.100.127:3306/ecs?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true
+#--------redis-----------#
+  redis:
+    host: 192.168.208.128
+    port: 6379
+    password:   #为空
+    jedis:
+      pool:
+        max-active: 8 #控制pool可分配多少个jedis实例
+        max-wait: -1  #表示borrow一个jedis实例时，最大的等待时间，如果超过等待时间，则直接抛JedisConnectionException
+        max-idle: 500 #控制一个pool最多有多少个状态为idle（空闲）的jedi实例
+        min-idle: 0   #初始化连接数
+    lettuce:
+      shutdown-timeout: 0 #关闭超时时间
+
